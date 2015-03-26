@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40432737-9999-4FB7-A21B-CB13293329C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>klukule.Engine</RootNamespace>
+    <AssemblyName>klukule.Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="klukule.Wrappers">
+      <HintPath>..\..\klukule.Wrapers\klukule.Wrappers\bin\Core-GLFW3\klukule.Wrappers.dll</HintPath>
+    </Reference>
+    <Reference Include="NVorbis">
+      <HintPath>..\..\klukule.Wrapers\klukule.Wrappers\bin\Core-GLFW3\NVorbis.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GLFW_Backend.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="RenderLoop.cs" />
+    <Compile Include="Models\RawModel.cs" />
+    <Compile Include="RenderEngine\Loader.cs" />
+    <Compile Include="Shaders\ShaderProgram.cs" />
+    <Compile Include="Shaders\StaticShader.cs" />
+    <Compile Include="Textures\ModelTexture.cs" />
+    <Compile Include="Models\TexturedModel.cs" />
+    <Compile Include="ToolBox\Math.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Camera.cs" />
+    <Compile Include="RenderEngine\OBJLoader.cs" />
+    <Compile Include="Entities\Light.cs" />
+    <Compile Include="RenderEngine\MasterRenderer.cs" />
+    <Compile Include="Terrains\Terrain.cs" />
+    <Compile Include="RenderEngine\EntityRenderer.cs" />
+    <Compile Include="Shaders\TerrainShader.cs" />
+    <Compile Include="RenderEngine\TerrainRenderer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Shaders\" />
+    <Folder Include="RenderEngine\" />
+    <Folder Include="Textures\" />
+    <Folder Include="ToolBox\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Terrains\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\testShader.frag">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\testShader.vert">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\terrainShader.frag">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\terrainShader.vert">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
