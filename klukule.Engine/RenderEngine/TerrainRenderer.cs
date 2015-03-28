@@ -53,7 +53,7 @@ namespace klukule.Engine
 
 		private void loadModelMatrix (Terrain terrain)
 		{
-			Matrix transformationMatrix = Math.createTransformationMatrix (new Vector3 (0, 0, 0), 0, 0, 0, 1);
+			Matrix transformationMatrix = Math.createTransformationMatrix (new Vector3 (terrain.getX (), 0, terrain.getZ ()), 0, 0, 0, 1);
 			shader.loadTransformationMatrix (transformationMatrix);
 
 		}

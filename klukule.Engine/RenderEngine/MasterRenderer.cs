@@ -25,7 +25,7 @@ namespace klukule.Engine
 
 		public MasterRenderer ()
 		{
-			//GL.Enable (EnableCap.CullFace);
+			GL.Enable (EnableCap.CullFace);
 			//GL.CullFace (CullFaceMode.Front);
 			projectionMatrix = createProjectionMatrix ();
 			entityRenderer = new EntityRenderer (entityShader, projectionMatrix);
@@ -38,12 +38,14 @@ namespace klukule.Engine
 			entityShader.start ();
 			entityShader.loadLight (sun);
 			entityShader.loadViewMatrix (camera);
+			GL.CullFace (CullFaceMode.Front);   //Model loader has a bug so it has to be this way (to laizy to fix this)
 			entityRenderer.render (entities);
 			entityShader.stop ();
 
 			terrainShader.start ();
 			terrainShader.loadLight (sun);
 			terrainShader.loadViewMatrix (camera);
+			GL.CullFace (CullFaceMode.Back);
 			terrainRenderer.render (terrains);
 			terrainShader.stop ();
 

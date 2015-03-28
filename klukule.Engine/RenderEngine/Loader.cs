@@ -21,7 +21,7 @@ namespace klukule.Engine
 		public RawModel loadToVAO (float[] positions, float[] textureCoords, float[] normals, int[] indices)
 		{
 			int vaoID = createVAO ();
-			Console.WriteLine (vaoID);
+			//Console.WriteLine (vaoID);
 			bindIndicesBuffer (indices);
 			storeDataInAttributeList (0, 3, positions);
 			storeDataInAttributeList (1, 2, textureCoords);
@@ -103,4 +103,3 @@ namespace klukule.Engine
 		}
 	}
 }
-

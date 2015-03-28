@@ -11,3 +11,16 @@ C:\Users\uzivatelbezhesla\Documents\Projects\SPCGame\SPCGame\bin\Debug\Shaders\t
 C:\Users\uzivatelbezhesla\Documents\Projects\SPCGame\SPCGame\bin\Debug\Shaders\testShader.vert
 C:\Users\uzivatelbezhesla\Documents\Projects\SPCGame\SPCGame\bin\Debug\Shaders\terrainShader.frag
 C:\Users\uzivatelbezhesla\Documents\Projects\SPCGame\SPCGame\bin\Debug\Shaders\terrainShader.vert
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\Shaders\testShader.frag
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\Shaders\testShader.vert
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\Shaders\terrainShader.frag
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\Shaders\terrainShader.vert
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\SPCGame.exe
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\SPCGame.pdb
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\klukule.Engine.dll
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\klukule.Wrappers.dll
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\NVorbis.dll
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\bin\Debug\klukule.Engine.pdb
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\obj\x86\Debug\SPCGame.csprojResolveAssemblyReference.cache
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\obj\x86\Debug\SPCGame.exe
+C:\Users\uzivatelbezhesla\Documents\Projects\SPCGameTest\SPCGame\obj\x86\Debug\SPCGame.pdb
