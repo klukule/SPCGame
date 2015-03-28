@@ -43,6 +43,10 @@ namespace klukule.Engine
 			GL.EnableVertexAttribArray (1);
 			GL.EnableVertexAttribArray (2);
 			ModelTexture texture = model.getTexture ();
+			if (texture.isHasTransparency ()) {
+				MasterRenderer.disableCulling ();
+			}
+			shader.loadFakeLightingVariable (texture.isUseFakeLightig ());
 			shader.loadShineValues (texture.getShineDamper (), texture.getReflectivity ());
 
 			GL.ActiveTexture (TextureUnit.Texture0);
@@ -51,6 +55,7 @@ namespace klukule.Engine
 
 		private void unbindTexturedModel ()
 		{
+			MasterRenderer.enableCulling ();
 			GL.DisableVertexAttribArray (0);
 			GL.DisableVertexAttribArray (1);
 			GL.DisableVertexAttribArray (2);

@@ -25,11 +25,20 @@ namespace klukule.Engine
 
 		public MasterRenderer ()
 		{
-			GL.Enable (EnableCap.CullFace);
-			//GL.CullFace (CullFaceMode.Front);
+			enableCulling ();
 			projectionMatrix = createProjectionMatrix ();
 			entityRenderer = new EntityRenderer (entityShader, projectionMatrix);
 			terrainRenderer = new TerrainRenderer (terrainShader, projectionMatrix);
+		}
+
+		public static void enableCulling ()
+		{
+			GL.Enable (EnableCap.CullFace);
+		}
+
+		public static void disableCulling ()
+		{
+			GL.Disable (EnableCap.CullFace);
 		}
 
 		public void render (Light sun, Camera camera)

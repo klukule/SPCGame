@@ -30,6 +30,10 @@ void main(void){
 	float dampedFactor = pow(spectacularFactor,shineDamper);
 
 	vec3 finalSpectacular = dampedFactor * reflectivity * lightColor;
-	out_Color = vec4(diffuse,1.0) * texture2D(textureSampler,pass_textureCoords) + vec4(finalSpectacular,1.0);
+	vec4 textureColor = texture2D(textureSampler,pass_textureCoords);
+	if(textureColor.a < 0.5){
+		discard;
+	}
+	out_Color = vec4(diffuse,1.0) * textureColor + vec4(finalSpectacular,1.0);
 }
 

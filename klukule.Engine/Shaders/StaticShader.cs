@@ -18,6 +18,7 @@ namespace klukule.Engine
 		private int location_lightColor;
 		private int location_shineDamper;
 		private int location_reflectivity;
+		private int location_useFakeLighting;
 
 		public StaticShader () : base (VERTEX_FILE, FRAGMENT_FILE)
 		{
@@ -41,6 +42,12 @@ namespace klukule.Engine
 			location_lightColor = base.getUniformLocation ("lightColor");
 			location_shineDamper = base.getUniformLocation ("shineDamper");
 			location_reflectivity = base.getUniformLocation ("reflectivity");
+			location_useFakeLighting = base.getUniformLocation ("useFakeLighting");
+		}
+
+		public void loadFakeLightingVariable (bool fakeLighting)
+		{
+			base.loadBoolean (location_useFakeLighting, fakeLighting);
 		}
 
 		public void loadShineValues (float shineDamper, float reflectivity)
