@@ -32,7 +32,7 @@ namespace klukule.Engine
 				if (Glfw.GetKey (window, Key.Escape)) {
 					Glfw.SetWindowShouldClose (window, true);
 				}
-
+				//Meh
 				renderer.prepare ();
 				renderer.render (model);
 
